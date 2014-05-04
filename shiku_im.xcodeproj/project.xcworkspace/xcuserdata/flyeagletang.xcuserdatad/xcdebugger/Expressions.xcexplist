@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[MultiUserChatViewCtl xmppRoom:didReceiveMessage:fromOccupant:]:MultiUserChatViewCtl.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PullRefreshTableViewController setupStrings]:PullRefreshTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.tableView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MultiUserChatViewCtl sendButton:]:MultiUserChatViewCtl.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
