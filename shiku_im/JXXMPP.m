@@ -397,14 +397,13 @@ static JXXMPP *sharedManager;
     
 	DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
     NSString *delay = [[message elementForName:@"delay"] stringValue];
-    if(delay != nil)
+    NSString* type = [[message attributeForName:@"type"] stringValue];
+    if(delay != nil && [type isEqualToString:@"groupchat"])
         return;
     
     NSString *body = [[message elementForName:@"body"] stringValue];
     NSString *displayName = [[message from]bare];
     NSArray *strs=[displayName componentsSeparatedByString:@"@"];
-    
-    NSString* type = [[message attributeForName:@"type"] stringValue];
     
     SBJsonParser * resultParser = [[SBJsonParser alloc] init] ;
     NSDictionary* resultObject = [resultParser objectWithString:body];
@@ -487,8 +486,8 @@ static JXXMPP *sharedManager;
 
 -(void)fetchUser:(NSString*)userId
 {
-    ASIFormDataRequest *request=[ASIFormDataRequest requestWithURL:API_BASE_URL(@"user/get")];
-    
+     ASIFormDataRequest *request=[ASIFormDataRequest requestWithURL:API_BASE_URL(@"user/get")];
+     
      [request setPostValue:userId forKey:@"userId"];
      [request setDelegate:self];
      [request setDidFinishSelector:@selector(requestSuccess:)];
