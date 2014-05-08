@@ -190,11 +190,13 @@
 }
 
 +(NSString*)getHeadImage:(NSString*)userId{
-    int n = 0;
-    const char* s=[userId cString];
-    for(int i=0;i<strlen(s);i++)
-        n += s[i];
-    n = fmod(n, 18);
+    int n = [userId length];
+    if(n>0){
+        const char* s=[userId cString];
+        for(int i=0;i<strlen(s);i++)
+            n += s[i];
+        n = fmod(n, 18);
+    }
     userId =  [NSString stringWithFormat:@"head_temp%d.jpg",n];
     return userId;
     

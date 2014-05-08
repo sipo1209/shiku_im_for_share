@@ -487,15 +487,13 @@ static JXXMPP *sharedManager;
 
 -(void)fetchUser:(NSString*)userId
 {
-    /*
-     ASIFormDataRequest *request=[ASIFormDataRequest requestWithURL:API_BASE_URL(@"servlet/GetUserDetailServlet")];
-     
+    ASIFormDataRequest *request=[ASIFormDataRequest requestWithURL:API_BASE_URL(@"user/get")];
+    
      [request setPostValue:userId forKey:@"userId"];
      [request setDelegate:self];
      [request setDidFinishSelector:@selector(requestSuccess:)];
      [request setDidFailSelector:@selector(requestError:)];
      [request startAsynchronous];
-     */
 }
 
 -(void)requestSuccess:(ASIFormDataRequest*)request
