@@ -23,7 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [NSThread sleepForTimeInterval:1.5];
+    [NSThread sleepForTimeInterval:0.5];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     JXEmptyViewController* temp = [[[JXEmptyViewController alloc]init] autorelease];
